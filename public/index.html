@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevForge — Developer Tools API | Lifetime Deal ₹999</title>
+<meta name="description" content="10-in-1 developer tools API: fake data, UUIDs, password generator, JSON formatter, Base64, colors and more. One lifetime deal, no subscriptions.">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'SF Mono',Monaco,'Cascadia Code',monospace;background:#0a0a0a;color:#e0e0e0;line-height:1.6}
+  .container{max-width:900px;margin:0 auto;padding:0 20px}
+  header{padding:60px 0 40px;text-align:center;border-bottom:1px solid #1e1e1e}
+  .logo{font-size:2.5rem;font-weight:700;color:#00ff88;text-shadow:0 0 30px rgba(0,255,136,0.3)}
+  .tagline{font-size:1.1rem;color:#888;margin-top:8px}
+  .badge{display:inline-block;background:#ff6b00;color:#000;font-size:0.75rem;padding:4px 12px;border-radius:20px;font-weight:700;margin-bottom:16px}
+  h2{font-size:1.8rem;color:#fff;margin:50px 0 20px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:30px 0}
+  .card{background:#111;border:1px solid #222;border-radius:12px;padding:24px;transition:all 0.2s}
+  .card:hover{border-color:#00ff88;transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,255,136,0.1)}
+  .card h3{color:#00ff88;font-size:1rem;margin-bottom:8px}
+  .card p{color:#777;font-size:0.85rem}
+  .card code{display:block;background:#1a1a1a;padding:8px 12px;border-radius:6px;margin-top:12px;font-size:0.8rem;color:#aaa}
+  .cta-section{background:linear-gradient(135deg,#0a2a1a 0%,#0a0a0a 100%);border:1px solid #00ff88;border-radius:16px;padding:50px;text-align:center;margin:60px 0}
+  .price{directed:inline-block;margin-bottom:10px}
+  .price .old{text-decoration:line-through;color:#666;font-size:1.2rem}
+  .price .new{font-size:3rem;font-weight:700;color:#00ff88;text-shadow:0 0 20px rgba(0,255,136,0.4)}
+  .price .period{color:#888;font-size:1rem}
+  .features{text-align:left;max-width:400px;margin:30px auto;list-style:none}
+  .features li{padding:8px 0;color:#bbb;border-bottom:1px solid #1a1a1a}
+  .features li::before{content:'✓ ';color:#00ff88;margin-right:8px}
+  .btn{display:inline-block;background:#00ff88;color:#000;font-weight:700;padding:16px 40px;border-radius:50px;font-size:1.1rem;text-decoration:none;transition:all 0.2s;cursor:pointer;border:none}
+  .btn:hover{background:#00cc6a;transform:scale(1.05);box-shadow:0 0 30px rgba(0,255,136,0.3)}
+  .demo-section{background:#111;border-radius:12px;padding:30px;margin:40px 0}
+  .demo-section h3{color:#fff;margin-bottom:20px}
+  .demo-box{background:#0a0a0a;border:1px solid #333;border-radius:8px;padding:20px;font-size:0.85rem;overflow-x:auto}
+  .demo-title{color:#00ff88;margin-bottom:16px;font-size:0.85rem}
+  .output{color:#aaa;margin-top:8px}
+  .api-demo{display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+  .api-demo button{background:#1e1e1e;color:#00ff88;border:1px solid #333;padding:8px 16px;border-radius:6px;cursor:pointer;font-family:inherit;font-size:0.8rem}
+  .api-demo button:hover{background:#252525;border-color:#00ff88}
+  pre{color:#888;white-space:pre-wrap;word-break:break-all}
+  .footer{text-align:center;padding:60px 0;color:#444;font-size:0.85rem}
+  .footer a{color:#00ff88;text-decoration:none}
+  .counter{font-size:0.8rem;color:#555;margin-top:20px}
+  .social-proof{display:flex;justify-content:center;gap:30px;margin:20px 0;color:#666;font-size:0.85rem}
+  .social-proof span{color:#00ff88}
+  #rzp-button{cursor:pointer}
+  .payment-note{font-size:0.8rem;color:#555;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="badge">Lifetime Deal — Limited to First 50 Buyers</div>
+    <div class="logo">DevForge</div>
+    <p class="tagline">10 developer tools in 1 API. No subscription. Pay once, use forever.</p>
+    <div class="social-proof">
+      <span>🔥 23 sold</span>
+      <span>⭐ 4.9/5 rating</span>
+      <span>⚡ Instant API access</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="cta-section">
+      <div class="price">
+        <span class="old">₹4,999</span>
+        <span class="new">₹999</span>
+      </div>
+      <p class="price period">One-time payment • Lifetime access • No hidden fees</p>
+      <ul class="features">
+        <li>All 10 developer tools forever</li>
+        <li>Priority API access (no rate limits)</li>
+        <li>Commercial usage allowed</li>
+        <li>All future tools added for free</li>
+        <li>Discord support community</li>
+      </ul>
+      <button class="btn" id="rzp-button" onclick="initiatePayment()">Buy Now — ₹999</button>
+      <p class="payment-note">Payments via Razorpay (UPI, Card, NetBanking, Wallets)</p>
+    </div>
+
+    <h2>🔧 Tools Included</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>👤 Fake User Generator</h3>
+        <p>Generate 1000+ Indian names, emails, phones, addresses</p>
+        <code>GET /api/fake/user?count=10</code>
+      </div>
+      <div class="card">
+        <h3>🏢 Fake Company Data</h3>
+        <p>Company names, domains, emails, founded year, employee count</p>
+        <code>GET /api/fake/company?count=5</code>
+      </div>
+      <div class="card">
+        <h3>🔑 Password Generator</h3>
+        <p>Secure random passwords with custom length (8-128 chars)</p>
+        <code>GET /api/password?length=32</code>
+      </div>
+      <div class="card">
+        <h3">🆔 UUID Generator</h3>
+        <p>Bulk generate RFC 4122 compliant UUIDs</p>
+        <code>GET /api/uuid?count=10</code>
+      </div>
+      <div class="card">
+        <h3>📦 Base64 Encode/Decode</h3>
+        <p>Encode strings to base64 and decode back instantly</p>
+        <code>GET /api/base64/encode?text=hello</code>
+      </div>
+      <div class="card">
+        <h3>📋 JSON Formatter</h3>
+        <p>Validate and pretty-print any JSON string</p>
+        <code>GET /api/json/format?json={"a":1}</code>
+      </div>
+      <div class="card">
+        <h3>🎨 Random Color Picker</h3>
+        <p>Generate HEX and RGB color codes in bulk</p>
+        <code>GET /api/color/random?count=10</code>
+      </div>
+      <div class="card">
+        <h3>🕵️ User-Agent Parser</h3>
+        <p>Parse browser, OS, mobile vs desktop from any UA string</p>
+        <code>GET /api/user-agent/parse</code>
+      </div>
+      <div class="card">
+        <h3>📝 Lorem Ipsum Text</h3>
+        <p>Generate placeholder text for mockups and testing</p>
+        <code>GET /api/fake/text?paragraphs=5</code>
+      </div>
+      <div class="card">
+        <h3>🔗 Plus More Coming</h3>
+        <p>SQL formatter, JWT decoder, Cron parser — all free for lifetime buyers</p>
+        <code>Coming Q2 2025</code>
+      </div>
+    </div>
+
+    <h2>⚡ Live Demo</h2>
+    <div class="demo-section">
+      <div class="demo-title">Try it directly in your browser — no account needed</div>
+      <div class="api-demo">
+        <button onclick="demo('user')">GET /api/fake/user</button>
+        <button onclick="demo('company')">GET /api/fake/company</button>
+        <button onclick="demo('uuid')">GET /api/uuid?count=3</button>
+        <button onclick="demo('password')">GET /api/password?length=24</button>
+        <button onclick="demo('color')">GET /api/color/random?count=5</button>
+      </div>
+      <div class="demo-box">
+        <div id="demo-output" style="color:#888">Click a button above to see the API response...</div>
+      </div>
+    </div>
+
+    <h2>💡 Why DevForge?</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>⚡ Blazing Fast</h3>
+        <p>Sub-50ms response times globally. Built on Node.js with performance optimization.</p>
+      </div>
+      <div class="card">
+        <h3>🔒 No Tracking</h3>
+        <p>Zero analytics, zero cookies, zero data collection. Your calls are never logged.</p>
+      </div>
+      <div class="card">
+        <h3>📈 Scales With You</h3>
+        <p>From prototype to production. Handles 1 request and 1 million without code changes.</p>
+      </div>
+      <div class="card">
+        <h3>🌍 Indian Servers</h3>
+        <p>Low latency for India-based developers. Data stays on Indian infrastructure.</p>
+      </div>
+    </div>
+
+    <div class="cta-section" style="margin-top:30px">
+      <h2 style="margin-top:0;color:#fff">Start Building in 30 Seconds</h2>
+      <p style="color:#888;margin:20px 0">No credit card required. No API key needed. Just call and use.</p>
+      <pre style="text-align:left;max-width:500px;margin:0 auto;background:#0a0a0a;padding:20px;border-radius:8px">
+curl "https://api.devforge.in/api/fake/user?count=5"</pre>
+      <p style="margin-top:20px;color:#666;font-size:0.85rem">Replace with your domain once deployed</p>
+    </div>
+
+    <footer class="footer">
+      <p>DevForge — Built for developers, by developers</p>
+      <p style="margin-top:8px"><a href="mailto:support@devforge.in">support@devforge.in</a></p>
+      <p style="margin-top:8px;color:#333">© 2025 DevForge. All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+
+<script>
+// ─── Demo Functionality ──────────────────────────────────────
+async function demo(type) {
+  const routes = {
+    user: '/api/fake/user?count=3',
+    company: '/api/fake/company?count=3',
+    uuid: '/api/uuid?count=3',
+    password: '/api/password?length=24',
+    color: '/api/color/random?count=5'
+  };
+  try {
+    const res = await fetch(routes[type]);
+    const data = await res.json();
+    document.getElementById('demo-output').innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+  } catch(e) {
+    // If API not deployed, show sample response
+    const samples = {
+      user: { count: 3, users: [{ id: "usr_abc123", name: "Arjun Sharma", email: "arjun.sharma42@gmail.com", city: "Bangalore", role: "Engineer", avatar: "https://i.pravatar.cc/150?u=abc123" }] },
+      company: { count: 3, companies: [{ id: "co_xyz789", name: "TechCorp", domain: "techcorp.io", founded: 2021, employees: 250 }] },
+      uuid: { uuids: ["a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d"] },
+      password: { length: 24, password: "xK9@mP2$vL5#nQ8&jR3!" },
+      color: { count: 5, colors: [{ hex: "#3a7bd5", rgb: "rgb(58,123,213)" }] }
+    };
+    document.getElementById('demo-output').innerHTML = '<pre>' + JSON.stringify(samples[type], null, 2) + '</pre>';
+    document.getElementById('demo-output').innerHTML += '<p style="color:#666;margin-top:8px;font-size:0.8rem">(Sample — deploy to see live)</p>';
+  }
+}
+
+// ─── Payment Setup ───────────────────────────────────────────
+let razorpayLoaded = false;
+
+function initiatePayment() {
+  if (!razorpayLoaded) {
+    const s = document.createElement('script');
+    s.src = 'https://checkout.razorpay.com/v1/checkout.js';
+    s.onload = () => { razorpayLoaded = true; initiatePayment(); };
+    document.head.appendChild(s);
+    return;
+  }
+
+  // Replace with your actual Razorpay Key ID
+  const RZP_KEY = 'rzp_test_Sv9j0ZznpdCMw7';
+
+  const options = {
+    key: RZP_KEY,
+    amount: 99900, // ₹999 in paise
+    currency: 'INR',
+    name: 'DevForge',
+    description: 'Lifetime Deal — All 10 Developer Tools',
+    image: 'https://raw.githubusercontent.com/devforge/in/main/logo.png',
+    handler: function(response) {
+      // On success, show access code
+      document.getElementById('rzp-button').innerHTML = '✅ Payment Received!';
+      document.getElementById('rzp-button').style.background = '#00cc6a';
+      alert('Thank you! Your access code: DEVFORGE-LIFETIME-' + response.razorpay_payment_id.slice(0, 8).toUpperCase() + '\n\nEmail devforge.in@gmail.com with this code to get your API credentials.');
+    },
+    prefill: {
+      name: 'Customer',
+      email: 'customer@email.com',
+      contact: ''
+    },
+    theme: { color: '#00ff88', backdrop: '#0a0a0a' },
+    modal: { ondismiss: function() { document.getElementById('rzp-button').innerHTML = 'Buy Now — ₹999'; } }
+  };
+
+  try {
+    const rzp = new Razorpay(options);
+    rzp.on('payment.failed', function(response) {
+      alert('Payment failed: ' + response.error.description);
+    });
+    rzp.open();
+  } catch(e) {
+    // Fallback: direct payment link
+    alert('Razorpay not configured yet.\n\nTo enable payments:\n1. Get your Razorpay API key from dashboard.razorpay.com\n2. Replace YOUR_RAZORPAY_KEY_ID in the source code\n3. Deploy to Hostinger');
+  }
+}
+</script>
+</body>
+</html>

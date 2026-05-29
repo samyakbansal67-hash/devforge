@@ -1,0 +1,13 @@
+{
+  "name": "devforge",
+  "version": "1.0.0",
+  "description": "10-in-1 Developer Tools API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["developer-tools","api","fake-data","uuid","password-generator"],
+  "author": "DevForge",
+  "license": "MIT"
+}

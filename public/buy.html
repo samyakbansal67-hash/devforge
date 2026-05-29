@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buy DevForge Lifetime Deal — ₹999</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:monospace;background:#0a0a0a;color:#e0e0e0;min-height:100vh;display:flex;align-items:center;justify-content:center}
+  .card{background:#111;border:1px solid #222;border-radius:16px;padding:50px;max-width:480px;text-align:center}
+  .logo{font-size:2rem;font-weight:700;color:#00ff88;margin-bottom:30px}
+  h1{font-size:1.5rem;color:#fff;margin-bottom:10px}
+  .price{font-size:3rem;color:#00ff88;margin:20px 0;font-weight:700}
+  .price span{font-size:1rem;color:#666;text-decoration:line-through;display:block;margin-bottom:5px}
+  .features{text-align:left;margin:30px 0}
+  .features li{padding:8px 0;color:#bbb;border-bottom:1px solid #1a1a1a;list-style:none}
+  .features li::before{content:'✓ ';color:#00ff88}
+  .btn{display:block;background:#00ff88;color:#000;font-weight:700;padding:16px;border-radius:8px;text-decoration:none;font-size:1.1rem;cursor:pointer;border:none;width:100%}
+  .btn:hover{background:#00cc6a}
+  .secure{color:#555;font-size:0.8rem;margin-top:15px}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">DevForge</div>
+  <h1>Lifetime Deal</h1>
+  <p style="color:#888">All 10 developer tools, forever</p>
+  <div class="price">
+    <span>₹4,999</span>
+    ₹999
+  </div>
+  <ul class="features">
+    <li>10 developer tools access</li>
+    <li>No rate limits</li>
+    <li>Commercial usage</li>
+    <li>All future tools included</li>
+    <li>Lifetime updates</li>
+  </ul>
+  <button class="btn" onclick="initiatePayment()">Pay ₹999 — Get Instant Access</button>
+  <p class="secure">🔒 Secured by Razorpay • UPI, Card, NetBanking</p>
+</div>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+function initiatePayment() {
+  const options = {
+    key: 'rzp_test_Sv9j0ZznpdCMw7',
+    amount: 99900,
+    currency: 'INR',
+    name: 'DevForge',
+    description: 'Lifetime Deal',
+    handler: function(response) {
+      window.location.href = '/success.html?payment=' + response.razorpay_payment_id;
+    }
+  };
+  try {
+    const rzp = new Razorpay(options);
+    rzp.open();
+  } catch(e) {
+    alert('Configure your Razorpay key first. See README.md');
+  }
+}
+</script>
+</body>
+</html>

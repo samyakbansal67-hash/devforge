@@ -1,0 +1,50 @@
+name: Deploy to Hostinger
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test server
+        run: |
+          node server.js &
+          sleep 3
+          curl -f http://localhost:3000/api/health || exit 1
+          pkill -f "node server.js" || true
+
+      - name: Deploy to Hostinger via RSYNC
+        env:
+          HOST: ${{ secrets.HOSTINGER_HOST }}
+          PORT: ${{ secrets.HOSTINGER_PORT }}
+          USER: ${{ secrets.HOSTINGER_USER }}
+          PASSWORD: ${{ secrets.HOSTINGER_PASSWORD }}
+          REMOTE_PATH: ${{ secrets.HOSTINGER_PATH }}
+        run: |
+          apt-get update && apt-get install -y rsync openssh-client
+          echo "$PASSWORD" | sshpass -p "$PASSWORD" rsync -avz --delete \
+            -e "ssh -p $PORT" \
+            ./ "$USER@$HOST:$REMOTE_PATH/"
+
+      - name: Restart Node.js service on Hostinger
+        env:
+          HOST: ${{ secrets.HOSTINGER_HOST }}
+          PORT: ${{ secrets.HOSTINGER_PORT }}
+          USER: ${{ secrets.HOSTINGER_USER }}
+          PASSWORD: ${{ secrets.HOSTINGER_PASSWORD }}
+          REMOTE_PATH: ${{ secrets.HOSTINGER_PATH }}
+        run: |
+          sshpass -p "$PASSWORD" ssh -p $PORT "$USER@$HOST" \
+            "cd $REMOTE_PATH && pm2 restart devforge || (npm install && pm2 start server.js --name devforge)"
