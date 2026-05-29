@@ -160,3 +160,27 @@ app.get('/api/health', (req, res) => res.json({ status: 'ok', uptime: process.up
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`DevForge running on port ${PORT}`));
+// Vercel serverless handler
+const vercelHandler = (req, res) => {
+  // Vercel passes the path differently
+  const path = req.url.includes('/api/') ? req.url : '/api';
+  const baseUrl = 'https://' + req.headers.host;
+  
+  // Proxy to local handlers
+  if (req.url.startsWith('/api/')) {
+    // Handle as local request
+    return app(req, res);
+  }
+  
+  // Serve static files for non-API routes
+  const fs = require('fs');
+  const staticFile = path.join(__dirname, 'public', req.url === '/' ? 'index.html' : req.url);
+  if (fs.existsSync(staticFile)) {
+    res.setHeader('Content-Type', 'text/html');
+    res.end(fs.readFileSync(staticFile));
+  } else {
+    res.status(404).json({ error: 'Not found' });
+  }
+};
+
+module.exports = vercelHandler;
