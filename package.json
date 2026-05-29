@@ -1,11 +1,14 @@
 {
   "name": "devforge",
   "version": "1.0.0",
-  "description": "10-in-1 Developer Tools API",
+  "description": "10-in-1 Developer Tools API — Lifetime Deal ₹999",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
   },
   "keywords": ["developer-tools","api","fake-data","uuid","password-generator"],
   "author": "DevForge",
